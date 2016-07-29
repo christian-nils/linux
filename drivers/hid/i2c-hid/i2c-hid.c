@@ -1208,8 +1208,7 @@ static int i2c_hid_runtime_resume(struct device *dev)
 
 static const struct dev_pm_ops i2c_hid_pm = {
 	SET_SYSTEM_SLEEP_PM_OPS(i2c_hid_suspend, i2c_hid_resume)
-	SET_RUNTIME_PM_OPS(i2c_hid_runtime_suspend, i2c_hid_runtime_resume,
-			   NULL)
+	SET_RUNTIME_PM_OPS(NULL, NULL, NULL)
 };
 
 static const struct i2c_device_id i2c_hid_id_table[] = {
